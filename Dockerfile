@@ -5,7 +5,7 @@
 FROM eternnoir/ubuntu-14.04-sshd
 MAINTAINER Frank Wang "eternnoir@gmail.com"
 
-RUN apt-get update && apt-get upgrade && apt-get install default-jre
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install default-jre && apt-get clean
 
 RUN adduser --quiet jenkins
 RUN echo "jenkins:jenkins" | chpasswd
