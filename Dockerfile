@@ -10,4 +10,6 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get -y install default-jre &&
 RUN adduser --quiet jenkins
 RUN echo "jenkins:jenkins" | chpasswd
 
+EXPOSE 22
+
 CMD ["/usr/sbin/sshd", "-D"]
